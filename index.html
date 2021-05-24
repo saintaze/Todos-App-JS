@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Todos App</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+	<header>
+		<h1>Todos App</h1>
+	</header>
+
+	<section class="container">
+		
+		<div class="new-todo-box">
+			<input type="text" placeholder="New Todo..." autofocus>
+			<button>Add</button>
+		</div>
+
+		<div class="search-todo-box">
+			<input type="text" placeholder="Search Todos...">
+			<button>Search</button>
+		</div>
+		
+		<p class="add-todos-message">Add todos to get going!</p>
+		
+		<div class="todo-actions">
+			<div>
+				<button class="check-all">Check All</button>
+				<button class="delete-all">Delete All</button>
+				<button class="active">Active</button>
+				<button class="completed">Completed</button>
+				<button class="all">All</button>
+			</div>
+			<div class="todo-actions-right">
+				<div class="pagination-stats"></div>
+			</div>
+		</div>
+		
+		<main>
+			<div class="todos-list"></div>
+			<div class="pagination-container"></div>
+			<p class="no-results">No results to show!</p>
+		</main>
+
+	</section>
+	<script src="main.js"></script>
+
+</body>
+</html>

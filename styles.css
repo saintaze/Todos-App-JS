@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #555;
+}
+
+body {
+  background: #f3f3f3;
+  overflow-y: scroll;
+}
+
+.container {
+  max-width: 788px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: #eee;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-weight: 500;
+  font-size: 33px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.todos-list {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 25px;
+  box-shadow: 0px 0px 4px -1px rgb(0 0 0 / 15%);
+}
+
+.todo {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  border-top: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+}
+
+.todo p {
+  color: rgb(44, 62, 80);
+  font-weight: 300;
+  word-break: break-all;
+}
+
+.todo p.done {
+  text-decoration: line-through;
+  color: #999;
+  transition: all 0.2s;
+}
+
+.todos-list .todo:last-child {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.todo:last-of-type {
+  border-bottom: none;
+}
+
+.todo span {
+  margin-left: auto;
+  padding-left: 12px;
+  font-size: 30px;
+  color: hotpink;
+  cursor: pointer;
+}
+
+.todo span:hover {
+  transition: all 0.3s;
+  color: #ff5dae;
+}
+
+.todo input {
+  margin-top: 2px;
+  margin-right: 13px;
+  cursor: pointer;
+}
+
+.todo label input {
+  visibility: hidden;
+  display: block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.todo label span {
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  margin-right: 13px;
+  border: 2px solid #ff5dae;
+  border-radius: 100%;
+}
+
+.todo label input:checked + span {
+  background: hotpink;
+}
+
+.pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.pagination-container button,
+.todo-actions button {
+  width: 50px;
+  height: 50px;
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #44aaee;
+  margin: 5px;
+  transition: 0.4s;
+  color: #fff;
+  font-size: 18px;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo-actions button {
+  width: auto;
+  padding: 8px 14px;
+  font-size: 15px;
+  height: auto;
+}
+
+.pagination-container button:hover,
+.todo-actions button:hover {
+  background-color: #44eeaa;
+  outline: 1px solid limegreen;
+}
+
+.pagination-container button.active,
+.todo-actions button.active {
+  background-color: #44eeaa;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pagination-container button:disabled {
+  background-color: #b9b9b9;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pagination-stats {
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.new-todo-box,
+.search-todo-box,
+.add-todos-message {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 50px;
+}
+
+.search-todo-box {
+  margin-top: -15px;
+}
+
+.add-todos-message {
+  font-size: 21px;
+  margin-top: 75px;
+}
+
+.todo-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-actions-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.new-todo-box input,
+.new-todo-box button,
+.search-todo-box input,
+.search-todo-box button {
+  padding: 11px 15px;
+  border: 1px solid #ccc;
+}
+
+.new-todo-box input,
+.search-todo-box input {
+  outline: none;
+  border-right: none;
+  width: 240px;
+}
+
+.new-todo-box input::placeholder,
+.search-todo-box input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.new-todo-box button,
+.search-todo-box button {
+  cursor: pointer;
+  background-color: rgb(231, 184, 124);
+  color: white;
+  font-size: 15px;
+  width: 85px;
+  padding: 8px 14px;
+  text-shadow: 0px 0px 4px rgb(0 0 0 / 20%);
+}
+
+.new-todo-box button:hover,
+.search-todo-box button:hover {
+  background-color: rgb(223 199 111);
+  transition: all 0.2s;
+}
+
+.no-results {
+  margin-top: 75px;
+  font-size: 18px;
+  display: none;
+}
